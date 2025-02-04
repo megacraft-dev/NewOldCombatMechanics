@@ -74,11 +74,10 @@ version = "2.0.4" // x-release-please-version
 description = "OldCombatMechanics"
 
 java {
-    toolchain {
-        // We can build with Java 17 but still support MC >=1.9
-        // This is because MC >=1.9 server can be run with higher Java versions
-        languageVersion.set(JavaLanguageVersion.of(17))
-    }
+    // We can build with Java 16 but still support MC >=1.9
+    // This is because MC >=1.9 server can be run with higher Java versions
+    sourceCompatibility = JavaVersion.VERSION_16
+    targetCompatibility = JavaVersion.VERSION_16
 }
 
 sourceSets {
